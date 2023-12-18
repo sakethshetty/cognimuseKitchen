@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Roboto:wght@500&display=swap");
+
+.not-found-container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.not-found-content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.not-found-content h1 {
+  font-family: "Fontdiner Swanky", cursive;
+  font-size: 30px;
+  color: #0d0e08;
+  margin-bottom: 1rem;
+}
+
+.not-found-content p {
+  margin-bottom: 2.5rem;
+  font-size: 20px;
+}
+
+.not-found-content p em {
+  font-style: italic;
+  color: #1f2114;
+  font-size: 20px;
+}
+
+.not-found-button {
+  font-family: "Fontdiner Swanky", cursive;
+  font-size: 2rem;
+  color: #2a2929;
+  border: none;
+  background-color: #f36a6f;
+  padding: 1rem 2.5rem;
+  transform: skew(-5deg);
+  transition: all 0.1s ease;
+  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/cursors-eye.png"), auto;
+}
+
+.not-found-button:hover {
+  background-color: #c5dc50;
+  transform: scale(1.15);
+}
+
+@media (max-width: 700px) {
+  
+  .not-found-container {
+    flex-flow: column;
+    font-size: large;
+  }
+
+  .not-found-content > * {
+    max-width: 700px;
+    height: 100%;
+    font-size: large;
+  }
+
+  .not-found-content h1 {
+    font-size: 3rem;
+  }
+
+  .not-found-content .not-found-button {
+    font-size: 1rem;
+    font-size: large;
+  }
+}

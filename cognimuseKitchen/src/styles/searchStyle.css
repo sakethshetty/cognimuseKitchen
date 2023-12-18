@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+    --border-radius: 10px;
+}
+
+.Card {
+  padding: 1px;
+  border-radius: var(--border-radius);
+  background: linear-gradient(-67deg, rgba(200, 216, 231, .7), rgba(255, 255, 255, .8));
+  overflow: hidden;
+  width: 40%;
+  height: 25px;
+  margin-right: 2px;
+}
+
+.CardInner {
+  background-color: #e2e9f4;
+  border-radius: var(--border-radius);
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.Icon {
+  max-width: 12%;
+  max-height: 23px;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  margin-right: 6px;
+}
+
+.Icon svg {
+  transform: translate(-1px, -1px);
+}
+
+ .InputContainer {
+   width: 75%; 
+   height: 100%;
+} 
+
+input {
+  background-color: #e3edf7;
+  padding: 4px 8px;
+  border: none;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 300;
+  font-size: 6px;
+  color: black;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: all 240ms ease-out;
+  min-width: 100%;
+  min-height: 100%;
+  /* max-width: 100px; */
+}
+
+input::placeholder {
+  color: #6d7f8f;
+}
+
+input:focus {
+  outline: none;
+  color: black;
+  background-color: #e3edf7;
+}
+
+.InputContainer {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.InputContainer:before,
+.InputContainer:after {
+  left: 0;
+  top: 0;
+  display: block;
+  content: "";
+  pointer-events: none;
+   width: 100%; 
+   height: 100%; 
+  position: absolute;
+}
+
+/*.InputContainer:before {
+  box-shadow: var(--bottom-shadow);
+}
+
+.InputContainer:after {
+  box-shadow: var(--top-shadow);
+} */

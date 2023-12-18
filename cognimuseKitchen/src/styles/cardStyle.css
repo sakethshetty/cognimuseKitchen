@@ -1,0 +1,137 @@
+article {
+    --img-scale: 1.001;
+    --title-color: black;
+    position: relative;
+    border-radius: 16px;
+    box-shadow: none;
+    background: #fff;
+    transform-origin: center;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    /* width: 30vw; */
+  }
+  
+  article a::after {
+    position: absolute;
+    inset-block: 0;
+    inset-inline: 0;
+    cursor: pointer;
+    content: "";
+  }
+  
+  /* basic article elements styling */
+  article h2 {
+    margin: 0 0 18px 0;
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.9rem;
+    letter-spacing: 0.06em;
+    color: var(--title-color);
+    transition: color 0.3s ease-out;
+  }
+  
+  figure {
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    display: flex;
+    /* justify-content: center; */
+  }
+  
+  article img {
+    max-width: 100%;
+    transform-origin: center;
+    transform: scale(var(--img-scale));
+    transition: transform 0.4s ease-in-out;
+    aspect-ratio: 16/9;
+
+  }
+  
+  .article-body h2{
+    margin: 2px;
+    padding: 2px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .article-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 425px){
+    .article-body h2{
+      font-size: 15px;
+    }
+
+
+    .article-wrapper {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      /* gap: 8px; */
+    }
+  }
+  
+  article a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #28666e;
+  }
+  
+  article a:focus {
+    outline: 1px dotted #28666e;
+  }
+  
+  /* using the has() relational pseudo selector to update our custom properties */
+  article:has(:hover, :focus) {
+    --img-scale: 1.1;
+    --title-color: #28666e;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; 
+   } 
+  
+  
+   /************************ 
+   Generic layout (demo looks)
+   **************************/
+  
+   *,
+   *::before,
+   *::after {
+     box-sizing : border-box; 
+   } 
+  
+   body { 
+     margin : 0;
+     font-family : "Figtree", sans-serif;
+     font-size : 1.2rem;
+     line-height : 1.6rem;
+     background-color: #E1E8EE;
+     min-height : 100vh;
+     min-width: 100vw;
+   } 
+ /* Default styles for large screens */
+.article-wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    /* gap: 8px; */
+  }
+  
+  /* Styles for medium screens */
+  /* @media screen and (max-width: 960px) {
+    .article-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  } */
+  
+  /* Styles for small screens */
+  /* @media screen and (max-width: 480px) {
+    .article-wrapper {
+      display: block;
+      margin: auto;
+    }
+  } */
+  
